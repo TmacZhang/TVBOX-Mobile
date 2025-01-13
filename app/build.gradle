@@ -42,22 +42,22 @@ android {
         exclude 'META-INF/DEPENDENCIES'
     }
 
-    signingConfigs {
-        config {
-            keyAlias 'TVBoxOSC'
-            keyPassword 'TVBoxOSC'
-            storeFile file('..\\TVBoxOSC.jks')
-            storePassword 'TVBoxOSC'
-        }
-    }
+//    signingConfigs {
+//        config {
+//            keyAlias 'TVBoxOSC'
+//            keyPassword 'TVBoxOSC'
+//            storeFile file('..\\TVBoxOSC.jks')
+//            storePassword 'TVBoxOSC'
+//        }
+//    }
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
         }
 
         release {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
             minifyEnabled false
         }
     }
@@ -105,8 +105,8 @@ dependencies {
     implementation 'org.conscrypt:conscrypt-android:2.5.2'
 
     implementation 'com.squareup.okhttp3:okhttp:3.12.11'
-    annotationProcessor 'androidx.room:room-compiler:2.3.0'
-    implementation 'androidx.room:room-runtime:2.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.4.0'
+    implementation 'androidx.room:room-runtime:2.4.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.squareup.okio:okio:2.8.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
